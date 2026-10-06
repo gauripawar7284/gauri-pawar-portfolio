@@ -1,0 +1,74 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #050810;
+  --accent: #38bdf8;
+  --primary: #bae6ff;
+  --text-body: #c9cdd6;
+  --border: #27272a;
+  --radius-card: 20px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--bg);
+  color: #fff;
+  font-family: "Inter", "Noto Sans Devanagari", sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: rgba(56, 189, 248, 0.35);
+}
+
+/* Fixed blueprint grid + soft blue glow that every dark section sits on */
+.grid-bg {
+  background-color: var(--bg);
+  background-image:
+    radial-gradient(ellipse 45% 38% at 50% 30%, rgba(56, 189, 248, 0.16), transparent 70%),
+    linear-gradient(rgba(255, 255, 255, 0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.045) 1px, transparent 1px);
+  background-size: 100% 100%, 62px 62px, 62px 62px;
+}
+
+/* Metallic headline gradient */
+.metal-text {
+  background-image: linear-gradient(180deg, #fff 0%, #dbe3ec 38%, #96a3b3 72%, #5d6b7c 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Glowing sky-blue pill button */
+.btn-glow {
+  background-image: linear-gradient(123deg, #38bdf8 7%, #7dd3fc 38%, #bae6ff 70%, #e4f4ff 100%);
+  color: var(--bg);
+  box-shadow:
+    0 4px 18px rgba(56, 189, 248, 0.35),
+    inset 0 1px 0 rgba(255, 255, 255, 0.6);
+  transition: box-shadow 0.25s ease, transform 0.25s ease;
+}
+.btn-glow:hover {
+  box-shadow:
+    0 8px 32px rgba(56, 189, 248, 0.6),
+    inset 0 1px 0 rgba(255, 255, 255, 0.7);
+}
+
+.glass {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  backdrop-filter: blur(14px);
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
