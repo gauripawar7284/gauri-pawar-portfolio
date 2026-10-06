@@ -19,7 +19,7 @@ export const profile = {
   highlight: "responsive, user-friendly interfaces",
   profileImage: ProfileImage,
   profileCutout: ProfileCutout,
-  resume: `${import.meta.env.BASE_URL}Gauri_Pawar_Resume.docx`,
+  resume: `${import.meta.env.BASE_URL}GAURI_PAWAR_RESUME.pdf`,
   github: "https://github.com/gauripawar7284",
   linkedin: "https://www.linkedin.com/in/gauri-pawar-b7464a420",
   email: "gauripawar7284@gmail.com",

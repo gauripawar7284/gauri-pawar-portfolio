@@ -63,7 +63,7 @@ export default function Navbar({ visible }) {
           <div className="flex items-center gap-2">
             <motion.a
               href={profile.resume}
-              download="Gauri_Pawar_Resume.docx"
+              download="GAURI_PAWAR_RESUME.pdf"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.96 }}
               className="flex items-center gap-1.5 rounded-xl border border-white/10 bg-white/5 px-3.5 py-1.5 font-figtree text-xs font-bold uppercase tracking-wider text-white transition-colors hover:border-accent/60"

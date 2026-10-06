@@ -1,14 +1,26 @@
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import toast from "react-hot-toast";
-import { FiFileText, FiGithub, FiLinkedin, FiMail, FiSend, FiX } from "react-icons/fi";
+import {
+  FiFileText,
+  FiGithub,
+  FiLinkedin,
+  FiMail,
+  FiSend,
+  FiX,
+} from "react-icons/fi";
 import { availableFor, profile } from "../data/content";
 
 const links = [
   { label: "LinkedIn", href: profile.linkedin, Icon: FiLinkedin },
   { label: "Gmail", href: `mailto:${profile.email}`, Icon: FiMail },
   { label: "GitHub", href: profile.github, Icon: FiGithub },
-  { label: "Resume", href: profile.resume, Icon: FiFileText, download: "Gauri_Pawar_Resume.docx" },
+  {
+    label: "Resume",
+    href: profile.resume,
+    Icon: FiFileText,
+    download: "GAURI_PAWAR_RESUME.pdf",
+  },
 ];
 
 export default function Connect() {
@@ -92,8 +104,8 @@ export default function Connect() {
           transition={{ delay: 0.2 }}
           className="mt-6 max-w-xl text-base leading-relaxed text-body"
         >
-          I&apos;m open to UI/UX and frontend projects — landing pages, redesigns, or
-          collaborations. Tell me what you&apos;re building.
+          I&apos;m open to UI/UX and frontend projects — landing pages,
+          redesigns, or collaborations. Tell me what you&apos;re building.
         </motion.p>
 
         <div className="mt-10 flex flex-wrap items-center justify-center gap-3">
@@ -122,8 +134,8 @@ export default function Connect() {
       </div>
 
       <p className="mx-auto mt-28 max-w-5xl border-t border-white/10 pt-6 text-center font-figtree text-[11px] font-semibold uppercase tracking-[0.2em] text-slate-500">
-        Designed &amp; built by {profile.name} © {new Date().getFullYear()}. Built with React, Tailwind
-        and Framer Motion.
+        Designed &amp; built by {profile.name} © {new Date().getFullYear()}.
+        Built with React, Tailwind and Framer Motion.
       </p>
 
       <AnimatePresence>
@@ -145,17 +157,41 @@ export default function Connect() {
               className="glass w-full max-w-lg space-y-4 rounded-[24px] bg-[#0b1220]/90 p-6 text-left"
             >
               <div className="flex items-center justify-between">
-                <h3 className="font-figtree text-xl font-extrabold">Send a message</h3>
-                <button type="button" onClick={() => setOpen(false)} aria-label="Close" className="text-slate-400 hover:text-white">
+                <h3 className="font-figtree text-xl font-extrabold">
+                  Send a message
+                </h3>
+                <button
+                  type="button"
+                  onClick={() => setOpen(false)}
+                  aria-label="Close"
+                  className="text-slate-400 hover:text-white"
+                >
                   <FiX size={20} />
                 </button>
               </div>
               <div className="grid gap-4 sm:grid-cols-2">
-                <input name="name" required placeholder="Name *" className={field} />
-                <input name="email" type="email" required placeholder="Email *" className={field} />
+                <input
+                  name="name"
+                  required
+                  placeholder="Name *"
+                  className={field}
+                />
+                <input
+                  name="email"
+                  type="email"
+                  required
+                  placeholder="Email *"
+                  className={field}
+                />
               </div>
               <input name="subject" placeholder="Subject" className={field} />
-              <textarea name="message" rows="4" required placeholder="Tell me about your project... *" className={field} />
+              <textarea
+                name="message"
+                rows="4"
+                required
+                placeholder="Tell me about your project... *"
+                className={field}
+              />
               <motion.button
                 type="submit"
                 disabled={sending}
